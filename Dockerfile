@@ -10,5 +10,5 @@
 # bumps both digests independently; if they drift, the nodes and garbd can
 # still talk to each other (the wire protocol is versioned, not tied to the
 # packaging), but keeping them matched is the point.
-FROM mariadb:11.8.9@sha256:79d59758afc91b89b120b0a8904d637f5a3b3e1c4900f29b740d6d46c72fef68
+FROM mariadb:13.0.2@sha256:d4fdec0510ad498e4f3127da30a99df3745bd6d5e611ae6ac5f76403d9284a8d
 RUN apt-get update && apt-get install -y --no-install-recommends galera-4 && rm -rf /var/lib/apt/lists/*
