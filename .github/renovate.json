@@ -9,6 +9,13 @@
   "prConcurrentLimit": 0,
   "packageRules": [
     {
+      "description": "MariaDB: patch releases only. A major/minor bump can change on-disk format or defaults; opt into those deliberately.",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["mariadb"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
+    },
+    {
       "groupName": "All Homelab Dependencies",
       "groupSlug": "all-homelab-deps",
       "description": "Squash all incoming dependency updates into a single consolidated branch to eliminate separate commit noise.",
