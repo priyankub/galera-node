@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "rebaseWhen": "behind-base-branch",
+  "dependencyDashboard": true,
+  "labels": ["dependencies", "no-stale"],
+  "commitMessagePrefix": "⬆️",
+  "commitMessageTopic": "{{depName}}",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "groupName": "All Homelab Dependencies",
+      "groupSlug": "all-homelab-deps",
+      "description": "Squash all incoming dependency updates into a single consolidated branch to eliminate separate commit noise."
+    }
+  ]
+}
